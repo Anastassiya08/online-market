@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+#    db:
+#        image: postgres:11.8
+#        environment:
+#            - POSTGRES_DB=postgres
+#            - POSTGRES_USER=admin
+#            - POSTGRES_PASSWORD=excellent
+#        ports:
+#            - "5437:5437"
+#        restart: always
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/code
+#        depends_on:
+#            - db
+#            -auth
+#    auth:
+#        build: auth/
+#        ports:
+#            - "5002:5002"
+#        volumes:
+#            - .:/code
+#        depends_on:
+#            - db
+#        restart: always
+
